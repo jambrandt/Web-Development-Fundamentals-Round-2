@@ -3,16 +3,13 @@
 //this changes the css of your body tag to be green
 document.querySelector("body").style.backgroundColor= "#00FF00";
 
-var jan = Number (prompt("How much were your total bills for January?", 0));
-var feb = Number (prompt("How much were your total bills for February?", 0));
-var mar = Number (prompt("How much were your total bills for March?", 0));
 
-function monthlyBills(jan , feb, mar){
+function monthlyBills(jan, feb, mar){
 	var total = jan + feb + mar;
-	var average = total / 3;
-	console.log(average);
+	var ave = total / 3;
+	console.log(ave)
 	
-	if (average <= 1500){
+	if (ave <= 1500){
 	console.log ("Good job staying on track!");
 }
     else{
@@ -21,6 +18,6 @@ function monthlyBills(jan , feb, mar){
 
 }
 
-monthlyBills()
+monthlyBills(prompt("How much were your total bills for January?"), prompt("How much were your total bills for February?", 0), prompt("How much were your total bills for March?", 0))
 
 
